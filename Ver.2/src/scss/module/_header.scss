@@ -1,0 +1,69 @@
+// header
+header {
+  background: white;
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+
+  & .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.header-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-logo {
+  width: 125px;
+}
+
+.header-txt {
+  position: relative;
+  bottom: -10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.header-btn {
+  padding: 14px 40px;
+  color: white;
+  background: #da6b64;
+  border-radius: 1000px;
+}
+
+.r_header-btn {
+  color: white;
+  display: none;
+  height: 100%;
+  background: #da6b64;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@include mq(md) {
+  .header-left {
+    flex-direction: column;
+  }
+  .header-txt {
+    display: flex;
+    order: -1;
+  }
+
+  .header-btn {
+    display: none;
+  }
+
+  .r_header-btn {
+    display: inline-block;
+  }
+}
