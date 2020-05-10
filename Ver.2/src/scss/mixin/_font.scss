@@ -1,0 +1,22 @@
+// フォントサイズ
+
+.txt {
+  &s {
+    &s {
+      font-size: 14px;
+    }
+
+    font-size: 16px;
+  }
+
+  &m {
+    &s {
+      font-size: 18px;
+    }
+    font-size: 20px;
+  }
+
+  &l {
+    font-size: 24px;
+  }
+}

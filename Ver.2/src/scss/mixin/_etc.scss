@@ -1,0 +1,70 @@
+.border-bottom-yellow {
+  border-bottom: solid 10px #ebb94d;
+}
+
+.bgwhite {
+  background: white;
+}
+
+.brackets {
+  position: relative;
+  padding: 40px 0px;
+  width: 860px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+  &:before,
+  &:after {
+    width: 45px;
+    height: 45px;
+    content: "";
+    position: absolute;
+  }
+
+  $brackets: solid 4px #ebb94d;
+
+  &:before {
+    top: 0;
+    left: 0;
+    border-top: $brackets;
+    border-left: $brackets;
+  }
+
+  &:after {
+    bottom: 0;
+    right: 0;
+    border-bottom: $brackets;
+    border-right: $brackets;
+  }
+}
+
+.color-orange {
+  color: #ebb94d;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+// クラス一括作成
+@mixin classBatchCreation($prefix, $style, $properties) {
+  @each $property in $properties {
+    .#{$prefix}-#{$property} {
+      #{$style}: $property;
+    }
+  }
+}
+
+// background image
+@mixin background-image($fileName) {
+  background-image: url("../img/#{$fileName}");
+  background-size: cover;
+  background-position: center;
+}
+
+.box {
+  border: solid 2px #ebb94d;
+  border-radius: 5px;
+  background: white;
+  padding: 40px 0 50px 0;
+}
